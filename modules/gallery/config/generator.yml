@@ -1,0 +1,46 @@
+<?php $i18n = sfContext::getInstance()->getI18n() ?>
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           gallery
+    theme:                 <?php echo sfConfig::get("app_sfMultipleAjaxUploadGalleryPlugin_theme")."\n"; ?>
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          gallery
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        created_at:        { label: Date de création, date_format: dd/MM/yyyy }
+        updated_at:        { label: Date de modification, date_format: dd/MM/yyyy }
+        title:             { label: Nom }
+        description:       { label: Description }
+      list:
+        title:             <?php echo $i18n->__("backend.list.title",array(),"sfmaug")."\n"; ?>
+        display:           [=id, =title]
+#        batch_actions:
+#          _delete: ~
+#          _purge: purge
+      filter:
+        class: false
+      form:    ~
+      edit:
+        title:             <?php echo $i18n->__("backend.edit.title",array(),"sfmaug")."\n"; ?>
+        display:
+          "Galerie":       [id, title, description, is_active]
+          "Photos":        [_photoUpload]
+        actions:
+          _list: ~
+          _delete: ~
+          _save: ~
+          _purge:
+            name: <?php echo $i18n->__("backend.edit.purge",array(),"sfmaug")."\n"; ?>
+            action: purge
+      new:
+        title:             <?php echo $i18n->__("backend.create.title",array(),"sfmaug")."\n"; ?>
+        display:
+          "Galerie":       [id, title, description]
