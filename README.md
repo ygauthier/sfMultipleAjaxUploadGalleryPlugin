@@ -123,3 +123,7 @@ SPECIAL THANKS TO THE COMMUNITY FOR ITS HELP :
 # [DAMIEN BRAULT](mailto:bd.tel@free.fr "email Damien Brault") aka GABS (notification messages, color filters, image rotation, image flipping)
 # [MATHIEU GIRARD](mailto:mathieu.etu@gmail.com "email Mathieu GIRARD") (image sorting)
 # [VIVIEN OLIVIER](mailto:vivien.olivier@gmail.com "email Vivien Olivier") (refactoring, configuration)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ygauthier/sfMultipleAjaxUploadGalleryPlugin/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
